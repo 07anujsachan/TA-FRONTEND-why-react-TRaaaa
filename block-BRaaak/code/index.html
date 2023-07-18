@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <h1 class="head">All Articles</h1>
+      <h3 class="head2">list of best articles on startups</h3>
+    <div id="root">
+    </div>
+    <script type="text/babel">
+      let cardInfo = {
+        title: "City Lights in New York",
+        date: new Date("2017-01-26"),
+        comments: 67,
+        subTitle: "The city that never sleeps.",
+        description:
+          "New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.",
+        category: "photos",
+        imageURL:
+          "https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+      };
+
+      let Card = (props) => (
+        <div className="basis">
+          <div className="parent">
+            <img className="img" src={props.imageURL} alt="#" />
+            <h2 className={props.className1}> 27 Mar </h2>
+            <h2 className={props.className2}> {props.category} </h2>
+          </div>
+          <div className="section2">
+            <h1 className="heading"> {props.title}</h1>
+            <h2 className="sub-heading"> {props.subTitle}</h2>
+            <p className="description"> {props.description}</p>
+          </div>
+        </div>
+      );
+      let cardUi = (
+        <div className="flex">
+          <Card
+            imageURL="https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+            category="photos"
+            title="City Lights in New York"
+            date="27 Mar"
+            description="New York ,  the largest city in the U.S. is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers."
+            subTitle="The city that never sleeps."
+            className1="date"
+            className2="category"
+          />
+          <Card
+            imageURL="https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+            category="photos"
+            title="City Lights in New York"
+            date="27 Mar"
+            description="New York ,  the largest city in the U.S. is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers."
+            subTitle="The city that never sleeps."
+            className1="date2"
+            className2="category2"
+          />
+          <Card
+            imageURL="https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+            category="photos"
+            title="City Lights in New York"
+            date="27 Mar"
+            description="New York ,  the largest city in the U.S. is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers."
+            subTitle="The city that never sleeps."
+            className1="date3"
+            className2="category3"
+          />
+        </div>
+      );
+
+      ReactDOM.render(cardUi, document.getElementById("root"));
+    </script>
+  </body>
+</html>
