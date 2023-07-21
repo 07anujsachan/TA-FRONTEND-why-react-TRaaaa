@@ -1,0 +1,17 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 70%;
+}
+.color-box {
+  width: 200px;
+  height: 80px;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
