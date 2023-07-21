@@ -1,0 +1,11 @@
+.container {
+  text-align: center;
+  margin: 0 auto;
+}
+.button {
+  background-color: rgb(30, 4, 130);
+  color: aliceblue;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 32px;
+}
